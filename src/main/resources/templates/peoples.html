@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="PT-BR" xmlns:th="http//www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Peoples</title>
+</head>
+
+<body style="background-color: rgba(128,128,128,0.45)">
+    <div >
+        <h1 style="color: rgba(119,0,255,0.93)"> são eles: </h1>
+    </div>
+    <hr>
+    <table>
+        <thead>
+            <tr style="color: #6e0a62">
+                <th >Nome</th>
+                <th>Profissão</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="color: #1c2185;" th:each="people:${peoples}">
+                <td th:text="${people.name}"> Nome</td>
+                <td th:text="${people.profession}"> Profissão</td>
+                <td th:text="${people.age}"> Idade</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
